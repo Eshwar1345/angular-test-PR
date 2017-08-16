@@ -14,10 +14,7 @@
     max-width: 320px;
   }
   .network-links {
-    align-items: center;
-    display: flex;
-    flex: auto;
-    justify-content: flex-end;
+    display: inline-block;
     max-width: calc(100% - 320px);
     .social-network {
       display: inline-flex;
