@@ -16,4 +16,9 @@ export class HeaderComponent implements OnInit {
     console.log('header click')
   }
 
+  isMenuOpen:boolean = false;
+  menuStatus(){
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }

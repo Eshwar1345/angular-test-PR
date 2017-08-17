@@ -1,3 +1,8 @@
-<div class="page-header" (click) = "headerClick()">
-  <a href="javascript:;"><span class="icon-menuBar"></span></a>
+<div class="row no-margin page-header" (click) = "headerClick()">
+  <div class="col-10 page-title">Page Header</div>
+  <div class="col-2 menu-bar" [class.active]="isMenuOpen" (click)="menuStatus()">
+    <div class="menu-bar-1"></div>
+    <div class="menu-bar-2"></div>
+    <div class="menu-bar-3"></div>
+  </div>
 </div>
