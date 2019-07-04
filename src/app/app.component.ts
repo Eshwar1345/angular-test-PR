@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, NgZone } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, NgZone } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -20,12 +20,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log('Page loaded');
-    //this.router.navigate(['/HomePageComponent']);
-    /*setTimeout(() => {
-      this.zone.run(() => {
-        this.router.navigate(['/HomePageComponent']);
-      });
-    }, 1000)*/
   }
 
   windowResize() {
