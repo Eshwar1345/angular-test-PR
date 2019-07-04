@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { configCommonWords } from '../../common-words-config';
 
 @Component({
   selector: 'app-footer',
@@ -11,11 +12,13 @@ import 'rxjs/add/operator/catch';
 })
 export class FooterComponent implements OnInit {
 
-  dataFromJSON; 
+  commonName: any;
+  dataFromJSON;
 
   constructor(private http: Http) { }
 
   ngOnInit() {
+    this.commonName = configCommonWords;
     var obj;
     this.getJSON().subscribe(
       data => {
