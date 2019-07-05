@@ -6,6 +6,7 @@ import { DirectivesNgSwitchComponent } from './pages/directives-ng-switch/direct
 import { PipeFilterComponent } from './pages/pipe-filter/pipe-filter.component';
 import { DirectivesComponent } from './pages/directives/directives.component';
 import { TemplateDrivenFormComponent } from './pages/template-driven-form/template-driven-form.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'directivesNgSwitch', component: DirectivesNgSwitchComponent, pathMatch: 'full' },
   { path: 'PipeFilter', component: PipeFilterComponent, pathMatch: 'full' },
   { path: 'Directives', component: DirectivesComponent, pathMatch: 'full' },
-  { path: 'TemplateDrivenForm', component: TemplateDrivenFormComponent, pathMatch: 'full' }
+  { path: 'TemplateDrivenForm', component: TemplateDrivenFormComponent, pathMatch: 'full' },
+  { path: 'DataBinding', component: DataBindingComponent, pathMatch: 'full' }
 ];
