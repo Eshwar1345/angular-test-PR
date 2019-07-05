@@ -26,6 +26,7 @@ import { FilterPipe } from './filter.pipe';
 import { DirectivesComponent } from './pages/directives/directives.component';
 import { HostDirectivesDirective } from './services/host-directives.directive';
 import { TemplateDrivenFormComponent } from './pages/template-driven-form/template-driven-form.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { TemplateDrivenFormComponent } from './pages/template-driven-form/templa
     FilterPipe,
     DirectivesComponent,
     HostDirectivesDirective,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,

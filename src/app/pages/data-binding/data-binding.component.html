@@ -1,0 +1,29 @@
+<h2>4 different types of Data Binding in Angular:</h2>
+
+<h6 class="label-title">Interpolation Binding</h6>
+<div>
+  <p>The person's name is {{person.name}}.</p>
+</div>
+<h6 class="label-title">Property Binding</h6>
+<div>
+  <img [src]='product.imageUrl' [title]='product.productName'/>
+</div>
+<h6 class="label-title">Event Binding</h6>
+<div class="d-flex">
+  <button (click)="decrement()">-</button>
+  <span class="counter-wrap">{{counter}}</span>
+  <button (click)="increment()">+</button>
+</div>
+<h6 class="label-title">Keyboard Events</h6>
+    <p>
+      <input type="text"
+             (keydown)="onEvent($event)"
+             on-keyup="onEvent($event)">
+      <span class="large">Type: {{event?.type}}</span>
+    </p>
+    <p>ctrl: {{event?.ctrlKey}}, shift: {{event?.shiftKey}}, meta: {{event?.metaKey}}</p>
+<h6 class="label-title">Two-Way Binding</h6>
+<div>
+  <input [ngModel]="username" (ngModelChange)="username = $event" type="text" value="Eshwar">
+  <p>Hello {{username}}!</p>
+</div>

@@ -4,14 +4,20 @@
 .main-wrapper {
   height: 100%;
   width: 100%;
-  &.sidebar-open:before {
-    background-color: rgba(0,0,0,0.5);
+  &:before {
+    background-color: rgba(0,0,0,0.65);
     content: "";
     height: 100%;
     left: 0;
+    opacity: 0;
     position: fixed;
     top: 0;
+    transition: 0.5s;
     width: 100%;
+    z-index: -2;
+  }
+  &.sidebar-open::before {
+    opacity: 1;
     z-index: 2;
   }
 }
