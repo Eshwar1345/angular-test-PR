@@ -12,7 +12,7 @@ export class WrapperComponent implements OnInit {
 
   public loaderWrap = false;
   // public pageLoaded = false;
-  @ViewChild('parentClick') parentClick: ElementRef;
+  @ViewChild('parentElement') parentClick: ElementRef;
 
   ngOnInit() { 
     setTimeout(() => {
