@@ -5,3 +5,9 @@
   min-width: 50px;
   text-align: center;
 }
+.property-img{
+  transition: all 0.5s;
+  &.rounded {
+    border-radius: 50%;
+  }
+}

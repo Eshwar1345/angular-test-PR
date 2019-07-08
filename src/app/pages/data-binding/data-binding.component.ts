@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -11,10 +11,25 @@ export class DataBindingComponent implements OnInit {
   counterValue = 0;
   key: string;
   event: KeyboardEvent;
+  public shouldShow = false;
+  @ViewChild("myLabel") lab: ElementRef;
+  
+  showOrHideManually() {
+    if(this.lab.nativeElement.hasAttribute('style')){
+      this.lab.nativeElement.removeAttribute('style');
+    }else{
+      this.lab.nativeElement.style.display = "none";
+    }
+  }
 
   constructor() { }
 
   ngOnInit() {
+    this.onEvent;
+  }
+
+  borderRadius(){
+    this.shouldShow = !this.shouldShow;
   }
 
   person = {

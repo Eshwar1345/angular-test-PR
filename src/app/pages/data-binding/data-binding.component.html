@@ -5,8 +5,15 @@
   <p>The person's name is {{person.name}}.</p>
 </div>
 <h6 class="label-title">Property Binding</h6>
-<div>
-  <img [src]='product.imageUrl' [title]='product.productName'/>
+<div class="d-flex">
+  <div>
+    <img [src]='product.imageUrl' [title]='product.productName' imageEleId class="property-img" [ngClass]="{rounded: shouldShow, noround: !shouldShow}"/>
+    <button class="btn btn-primary" (click)="borderRadius()">Round</button>
+  </div>
+  <div>
+    <button (click)="showOrHideManually()"> Show/Hide manually </button>
+    <label #myLabel> SOME TEXT BLABLA </label>
+  </div>
 </div>
 <h6 class="label-title">Event Binding</h6>
 <div class="d-flex">
