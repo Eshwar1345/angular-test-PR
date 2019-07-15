@@ -7,12 +7,12 @@
 <h6 class="label-title">Property Binding</h6>
 <div class="d-flex">
   <div>
-    <img [src]='product.imageUrl' [title]='product.productName' imageEleId class="property-img" [ngClass]="{rounded: shouldShow, noround: !shouldShow}"/>
+    <img [src]='product.imageUrl' [title]='product.productName' class="property-img" [ngClass]="{rounded: shouldShow, noround: !shouldShow}"/>
     <button class="btn btn-primary" (click)="borderRadius()">Round</button>
   </div>
-  <div>
-    <button (click)="showOrHideManually()"> Show/Hide manually </button>
-    <label #myLabel> SOME TEXT BLABLA </label>
+  <div class="manual-toggle">
+    <button (click)="showOrHideManually()" class="manual-button btn btn-primary"> Show/Hide manually </button>
+    <label #myLabel class="text-label"> SOME TEXT BLABLA </label>
   </div>
 </div>
 <h6 class="label-title">Event Binding</h6>
@@ -21,16 +21,30 @@
   <span class="counter-wrap">{{counter}}</span>
   <button (click)="increment()">+</button>
 </div>
-<h6 class="label-title">Keyboard Events</h6>
-    <p>
-      <input type="text"
-             (keydown)="onEvent($event)"
-             on-keyup="onEvent($event)">
-      <span class="large">Type: {{event?.type}}</span>
-    </p>
-    <p>ctrl: {{event?.ctrlKey}}, shift: {{event?.shiftKey}}, meta: {{event?.metaKey}}</p>
+<div>
+  <h6 class="label-title">Keyboard Events</h6>
+  <p>
+    <input type="text" (keydown)="onEvent($event)" on-keyup="onEvent($event)">
+    <span class="large">Type: {{event?.type}}</span>
+  </p>
+  <p>ctrl: {{event?.ctrlKey}}, shift: {{event?.shiftKey}}, meta: {{event?.metaKey}}</p>
+</div>
 <h6 class="label-title">Two-Way Binding</h6>
 <div>
   <input [ngModel]="username" (ngModelChange)="username = $event" type="text" value="Eshwar">
   <p>Hello {{username}}!</p>
 </div>
+<details>
+  <summary>Copyright 1999-2018.</summary>
+  <p> - by Refsnes Data. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+<input list="browsers">
+
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>

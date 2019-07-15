@@ -1,5 +1,5 @@
 .label-title {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 .counter-wrap {
   min-width: 50px;
@@ -10,4 +10,21 @@
   &.rounded {
     border-radius: 50%;
   }
+}
+.text-label {
+  transition: all 0.5s;
+  overflow: hidden;
+  padding: 0;
+  max-height: 24px;
+  margin: 0 0 0 15px;
+  width: 250px;
+}
+.manual-toggle {
+  align-items: center;
+  display: flex;
+  padding: 0 15px;
+}
+.manual-button {
+  min-width: 180px;
+  overflow: hidden;
 }

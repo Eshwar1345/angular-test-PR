@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ProjectListService } from '../../services/project-list.service';
-
 @Component({
   selector: 'app-pipe-filter',
   templateUrl: './pipe-filter.component.html',
@@ -10,7 +9,7 @@ export class PipeFilterComponent implements OnInit {
   /*name = 'Angular 6';
   email="";
   aa:boolean=false;
-
+  
   users=[{
     id:'123',
     email:'abc@gmail.com'
@@ -24,12 +23,12 @@ export class PipeFilterComponent implements OnInit {
     id:'123456',
     email:'test@gmail.com'
   }]
-
+  
   setIndex(ii){
     this.aa=ii;
     console.log(ii);
   }
-
+  
   characters = [
     'Finn the human',
     'Jake the dog',
@@ -38,19 +37,21 @@ export class PipeFilterComponent implements OnInit {
     'Beemo1',
     'Beemo2'
   ]
-
+  
   constructor() { }
-
+  
   ngOnInit() {
   }*/
-
+  
   customData: any;
   public searchText : string;
-
+  
   constructor(private _projectListData: ProjectListService) { }
-
+  @ViewChild("searchField") nameField: ElementRef;
+  
   ngOnInit() {
     this.defalutData();
+    this.nameField.nativeElement.focus();
   }
 
   defalutData() {
