@@ -3,7 +3,7 @@
 </h1>
 
 <div class="form-control d-flex">
-  <input type="text" class="form-control" name="email" [(ngModel)]="serchTerm" (change)="filterData()" placeholder="username or email" />
+  <input type="text" class="form-control" name="email" [(ngModel)]="serchTerm" #searchProject (change)="filterData()" placeholder="username or email" />
   <a href="javascript:;" class="btn btn-primary" (click)="filterData()">Search</a>
 </div>
 <div class="p-3">

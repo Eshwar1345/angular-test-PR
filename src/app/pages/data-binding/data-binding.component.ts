@@ -12,13 +12,16 @@ export class DataBindingComponent implements OnInit {
   key: string;
   event: KeyboardEvent;
   public shouldShow = false;
-  @ViewChild("myLabel") lab: ElementRef;
+  @ViewChild("myLabel") eleWidth: ElementRef;
   
   showOrHideManually() {
-    if(this.lab.nativeElement.hasAttribute('style')){
-      this.lab.nativeElement.removeAttribute('style');
+    if(this.eleWidth.nativeElement.hasAttribute('style')){
+      this.eleWidth.nativeElement.removeAttribute('style');
     }else{
-      this.lab.nativeElement.style.display = "none";
+      /*this.eleWidth.nativeElement.style.width = "0%";*/
+      this.eleWidth.nativeElement.setAttribute(
+        "style", "width: 0; background-color: gray;"
+      )
     }
   }
 

@@ -8,16 +8,18 @@
     background-color: rgba(0,0,0,0.65);
     content: "";
     height: 100%;
-    left: 0;
+    /*left: 0;*/
     opacity: 0;
     position: fixed;
+    right: 0;
     top: 0;
-    transition: 0.5s;
-    width: 100%;
+    transition: 0.512345s;
+    width: 0%;
     z-index: -2;
   }
-  &.sidebar-open::before {
+  &.sidebar-open:before {
     opacity: 1;
+    width: 100%;
     z-index: 2;
   }
 }

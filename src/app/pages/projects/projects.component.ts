@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { ProjectListService } from '../../services/project-list.service';
 
 @Component({
@@ -13,11 +13,13 @@ export class ProjectsComponent implements OnInit {
   projectList: any;
   filteredProjects: any;
   serchTerm = "";
+  @ViewChild("searchProject") searchField: ElementRef;
 
   constructor(private _projectListData: ProjectListService) { }
 
   ngOnInit() {
     this.defalutData();
+    this.searchField.nativeElement.focus();
   }
 
   defalutData() {
